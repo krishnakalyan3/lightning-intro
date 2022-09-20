@@ -7,7 +7,6 @@ class HelloWork(L.LightningWork):
     def run(self):
         print("Hello")
 
-
 class RootFlow(L.LightningFlow):
     def __init__(self):
         super().__init__()
@@ -25,7 +24,9 @@ class RootFlow(L.LightningFlow):
         return commands
 
     def run(self):
-        if self.command == "hello":
+        if self.command == "start":
             self.hello_work.run()
+        if self.command == "stop":
+            self.hello_work.stop()
 
 app = L.LightningApp(RootFlow())

@@ -18,12 +18,8 @@ python -m lightning run app app.py --open-ui false
 python -m lightning run app app.py --cloud --open-ui false
 ```
 
-### API
-Try out the swagger API. Add a command using `/command/add`
-
-https://*.litng.ai/docs
-
-### Connect
+### Usage
+Try out the swagger (https://*.litng.ai/docs) API. Add a command using `/command/add`. `cmd` with string `start` will create a new work and `stop` will stop the existing work.
 
 ```
 lightning connect 01gdd5e39n6bvx8thv9sy3p3re 
@@ -33,4 +29,5 @@ lightning disconnect
 
 ### Links
 - [Getting Started](https://lightning.ai/lightning-docs/get_started/lightning_apps_intro.html)
-- [CLI Server](https://lightning.ai/lightning-docs/workflows/build_command_line_interface/cli.html?highlight=cli)
+- [CLI](https://lightning.ai/lightning-docs/glossary/command_lines/command_lines.html)
+- [CLI Server](https://lightning.ai/lightning-docs/workflows/build_command_line_interface/cli.html)
