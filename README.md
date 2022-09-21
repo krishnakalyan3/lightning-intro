@@ -25,6 +25,9 @@ Try out the swagger (https://*.litng.ai/docs) API. Add a command using `/command
 lightning list apps
 lightning connect app_name 
 lightning add --cmd=hello
+
+lightning add --cmd=start
+lightning add --cmd=stop
 lightning disconnect
 ```
 
