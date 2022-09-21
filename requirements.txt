@@ -3,3 +3,4 @@ torchvision
 wandb
 gradio
 timm
+jsonargparse[signatures]

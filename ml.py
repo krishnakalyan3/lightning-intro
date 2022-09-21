@@ -35,5 +35,8 @@ class RootFlow(L.LightningFlow):
             self.train_work.stop()
             self.gradio_work.stop()
 
+    def configure_layout(self):
+        tab = {"name": "Grado EDA", "content": self.gradio_work}
+        return tab
 
 app = L.LightningApp(RootFlow())

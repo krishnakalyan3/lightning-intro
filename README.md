@@ -1,5 +1,3 @@
-
-
 ### Creating Virtual Environment
 
 ```
@@ -15,25 +13,39 @@ pip install -r requirements.txt
 python -m lightning run app app.py --open-ui false
 
 # Running App on the cloud 
-python -m lightning run app app.py --cloud --open-ui false
+lightning run app app.py --cloud --open-ui false
 ```
 
 ### Usage
 Try out the swagger (https://*.litng.ai/docs) API. Add a command using `/command/add`. `cmd` with string `start` will create a new work and `stop` will stop the existing work. Replace `01gdd5e39n6bvx8thv9sy3p3re` with your `app_id` (This can be obtained from the URL).
 
 ```
-lightning connect 01gdd5e39n6bvx8thv9sy3p3re 
+lightning list apps
+lightning connect app_name 
 lightning add --cmd=hello
 lightning disconnect
 ```
 
-### Machine Learning Application
+
+### Deploying ML Pipeline
 In this application we will use `CLI commands` to train a model followed by creating a Gradio application. Gradio model downloads the model weights from Weights and Biases.
 
 ```
-python -m lightning run app ml.py --cloud --open-ui false --env WANDB_API_KEY=$WANDB_API_KEY
-```
+lightning run app ml.py --cloud --open-ui false --env WANDB_API_KEY=$WANDB_API_KEY --name ml
+lightning list apps
+lightning connect ml
 
+# Train pipeline
+lightning av --cmd=train
+
+# Gradio pipeline
+lightning av --cmd=deploy
+
+# Stop pipeline
+lightning av --cmd=stop
+
+lightning disconnect
+```
 
 ### Links
 - [Getting Started](https://lightning.ai/lightning-docs/get_started/lightning_apps_intro.html)
