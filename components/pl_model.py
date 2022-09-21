@@ -28,7 +28,7 @@ class ImageClassifier(pl.LightningModule):
     def __init__(self):
         super().__init__()
         self.model = LitModel()
-    
+  
     def forward(self, x):
         x = self.model(x)
         return x
