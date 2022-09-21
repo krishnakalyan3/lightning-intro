@@ -18,10 +18,8 @@ python -m lightning run app app.py --open-ui false
 lightning run app app.py --cloud --open-ui false
 ```
 
-
-
 ### Usage
-Try out the swagger (https://*.litng.ai/docs) API. Add a command using `/command/add`. `cmd` with string `start` will create a new work and `stop` will stop the existing work. Replace `01gdd5e39n6bvx8thv9sy3p3re` with your `app_id` (This can be obtained from the URL).
+Try out the swagger (https://*.litng.ai/docs) API. Add a command using `/command/add`. `cmd` with string `start` will create a new work and `stop` will stop the existing work.
 
 ```
 lightning list apps
@@ -29,7 +27,6 @@ lightning connect app_name
 lightning add --cmd=hello
 lightning disconnect
 ```
-
 
 ### Deploying ML Pipeline
 In this application we will use `CLI commands` to train a model followed by creating a Gradio application. Gradio model downloads the model weights from Weights and Biases.
