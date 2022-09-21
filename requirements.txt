@@ -4,3 +4,8 @@ wandb
 gradio
 timm
 jsonargparse[signatures]
+kaggle
+pillow
+rich
+numpy
+albumentations
