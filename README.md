@@ -12,10 +12,10 @@ Lightning apps can be tested locally or on the cloud. In this repository we have
 
 ```
 # Running App locally (Testing)
-python -m lightning run app app.py --open-ui false
+lightning run app app.py --open-ui false
 
 # Running App on the cloud 
-lightning run app app.py --cloud --open-ui false
+lightning run app app.py --cloud --open-ui false --name demo
 ```
 
 ### Usage
@@ -23,7 +23,7 @@ Try out the swagger (https://*.litng.ai/docs) API. Add a command using `/command
 
 ```
 lightning list apps
-lightning connect app_name 
+lightning connect app_name -y
 lightning add --cmd=hello
 
 lightning add --cmd=start
@@ -40,7 +40,7 @@ lightning run app ml.py --cloud --open-ui false --env WANDB_API_KEY=$WANDB_API_K
 --name ml
 
 lightning list apps
-lightning connect ml
+lightning connect ml -y
 
 # Train pipeline
 lightning av --cmd=train
